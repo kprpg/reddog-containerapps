@@ -1,10 +1,11 @@
 # *nix only
-export RG="reddog"
-export LOCATION="eastus2"
-export SUB_ID="<YourSubscriptionID>"
+export RG="rgKontApps"
+export LOCATION="southcentralus"
+export SUB_ID="0c378775-d18a-45bb-b426-3627de556dd1"
 
 # Follow Azure CLI prompts to authenticate to your subscription of choice
 az login
+az login --use-device-code
 az account set --subscription $SUB_ID
 
 # Create resource group
