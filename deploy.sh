@@ -1,7 +1,7 @@
 # *nix only
-export RG="rgKontApps"
+export RG="rgContApps2"
 export LOCATION="southcentralus"
-export SUB_ID="0c378775-d18a-45bb-b426-3627de556dd1"
+export SUB_ID="ce8e7a90-6ff0-4074-8417-a55e6cac276f"
 
 # Follow Azure CLI prompts to authenticate to your subscription of choice
 az login
