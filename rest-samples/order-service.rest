@@ -1,4 +1,6 @@
-@order-service = reddog.whitebush-a2e52ffc.eastus2.azurecontainerapps.io
+@order-service = order-service--aie3a2s.blackglacier-66b40556.southcentralus.azurecontainerapps.io
+##@order-service = order-service--973lvth.mangohill-f5b6c8b4.southcentralus.azurecontainerapps.io
+@order-service-dapr = order-service--aie3a2s.blackglacier-66b40556.southcentralus.azurecontainerapps.io:5180
 @storeId = Redmond
 
 ### Create an order via order-service POST
@@ -7,7 +9,8 @@ Content-Type: application/json
  
 {
     "storeId": "{{storeId}}",
-    "customerName": "John 'Hannibal' Smith",
+    "firstName": "John 'Hannibal'",
+    "lastName": "Smith",
     "loyaltyId": "42",
     "orderItems": [
         {
@@ -23,4 +26,26 @@ Content-Type: application/json
             "quantity": 3
         }
     ]
+}
+
+### Get Products
+GET http://{{order-service}}/product
+
+### Publish an order via order-service dapr sidecar
+POST http://{{order-service-dapr}}/v1.0/publish/{{pubsubName}}/orders
+Content-Type: application/json
+
+{
+    "orderId": "{{$guid }}",
+    "orderDate": "{{$datetime iso8601}}",
+    "storeId": "{{storeId}}",
+    "firstName": "John 'Hannibal'",
+    "lastName": "Smith",
+    "loyaltyId": "42",
+    "orderTotal": 2.99,
+    "orderItems": [{
+        "menuItemId": 1,
+        "menuItemName": "Americano",
+        "quantity": 1
+    }]
 }

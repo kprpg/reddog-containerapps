@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\assets",
+    "\\deploy\\bicep",
+    "\\deploy\\bicep\\modules",
+    "\\deploy\\bicep\\modules\\container-apps",
+    "\\deploy\\bicep\\modules\\dapr-components",
+    "\\rest-samples",
+    "\\traefik\\dynamic"
+  ],
+  "SelectedNode": "\\deploy.sh",
+  "PreviewInSolutionExplorer": false
+}
