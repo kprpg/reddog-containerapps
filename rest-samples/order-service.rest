@@ -1,5 +1,7 @@
 @order-service = order-service--aie3a2s.blackglacier-66b40556.southcentralus.azurecontainerapps.io
 ##@order-service = order-service--973lvth.mangohill-f5b6c8b4.southcentralus.azurecontainerapps.io
+## Got the value for order-service from the Ingress blade for the service. Open the app in ACA
+## and go to the ingress blade and click on the URL on the right or COPY/PASTE it.
 @order-service-dapr = order-service--aie3a2s.blackglacier-66b40556.southcentralus.azurecontainerapps.io:5180
 @storeId = Redmond
 
